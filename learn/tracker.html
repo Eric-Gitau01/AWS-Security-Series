@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90-Day Productivity Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>90-Day Productivity Tracker</h1>
+            <div class="theme-toggle">
+                <button id="themeBtn"><i class="fas fa-moon"></i></button>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <div class="quote-container">
+                <p id="dailyQuote">"Loading motivational quote..."</p>
+            </div>
+
+            <div class="progress-summary">
+                <div class="progress-card">
+                    <h3>Overall Progress</h3>
+                    <div class="progress-bar">
+                        <div id="overallProgress" class="progress-fill"></div>
+                    </div>
+                    <span id="overallPercentage">0%</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h4>🧑‍💻 Coding (4h)</h4>
+                        <div class="progress-bar small">
+                            <div id="codingProgress" class="progress-fill"></div>
+                        </div>
+                        <span id="codingPercentage">0/360h</span>
+                    </div>
+                    <div class="stat-item">
+                        <h4>🌐 Webflow (3h)</h4>
+                        <div class="progress-bar small">
+                            <div id="webflowProgress" class="progress-fill"></div>
+                        </div>
+                        <span id="webflowPercentage">0/270h</span>
+                    </div>
+                    <div class="stat-item">
+                        <h4>🎨 UI/UX (2h)</h4>
+                        <div class="progress-bar small">
+                            <div id="designProgress" class="progress-fill"></div>
+                        </div>
+                        <span id="designPercentage">0/180h</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="daily-tracker">Daily Tracker</button>
+                <button class="tab-btn" data-tab="roadmap">UI/UX Roadmap</button>
+                <button class="tab-btn" data-tab="calendar">Calendar View</button>
+            </div>
+
+            <div class="tab-content active" id="daily-tracker">
+                <div class="hourly-tracker">
+                    <h2 id="selectedDate">Today's Progress</h2>
+                    
+                    <div class="task-list">
+                        <div class="task-item">
+                            <h3>🧑‍💻 Coding (4 hours)</h3>
+                            <div class="hour-input">
+                                <button class="hour-btn minus" data-task="coding">-</button>
+                                <input type="number" id="codingHours" min="0" max="4" value="0">
+                                <button class="hour-btn plus" data-task="coding">+</button>
+                                <span class="hour-label">/ 4 hours</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <h3>🌐 Webflow (3 hours)</h3>
+                            <div class="hour-input">
+                                <button class="hour-btn minus" data-task="webflow">-</button>
+                                <input type="number" id="webflowHours" min="0" max="3" value="0">
+                                <button class="hour-btn plus" data-task="webflow">+</button>
+                                <span class="hour-label">/ 3 hours</span>
+                            </div>
+                        </div>
+                        <div class="task-item">
+                            <h3>🎨 UI/UX Design (2 hours)</h3>
+                            <div class="hour-input">
+                                <button class="hour-btn minus" data-task="design">-</button>
+                                <input type="number" id="designHours" min="0" max="2" value="0">
+                                <button class="hour-btn plus" data-task="design">+</button>
+                                <span class="hour-label">/ 2 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="notes-section">
+                        <h3>📝 Daily Reflection</h3>
+                        <textarea id="dailyNotes" placeholder="What did you learn today? Any breakthroughs or challenges? Links to work?"></textarea>
+                        <button id="saveNotes">Save Entry</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="roadmap">
+                <h2>🎨 UI/UX Design Roadmap</h2>
+                <div class="roadmap-container" id="roadmapContainer">
+                    <!-- Roadmap will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="tab-content" id="calendar">
+                <h2>📅 Journey Timeline</h2>
+                <div class="calendar-nav">
+                    <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <h3 id="currentMonth">Month</h3>
+                    <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="calendar" id="calendar">
+                    <!-- Calendar will be generated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
