@@ -12,5 +12,5 @@ Each module builds practical skills for anyone learning to secure cloud infrastr
 - **05-Aws-secrets-manager-project**: Secure credentials and manage secrets safely  
 
 ## 🎯 Goal
-
+ 
 To provide practical, step-by-step AWS security projects that help learners move from **basic security concepts to advanced monitoring, threat detection, and secrets management**.  
