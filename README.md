@@ -13,4 +13,4 @@ Each module builds practical skills for anyone learning to secure cloud infrastr
 
 ## 🎯 Goal
  
-To provide practical, step-by-step AWS security projects that help learners move from **basic security concepts to advanced monitoring, threat detection, and secrets management**.   
+To provide practical, step-by-step AWS security projects that help learners move from **basic security concepts to advanced monitoring, threat detection, and secrets management**.    
